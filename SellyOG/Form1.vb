@@ -17,10 +17,12 @@ Public Class Form1
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Output.Items.Clear()
         startThread = New Thread(AddressOf StartCheck)
         startThread.Start()
         Button3.Enabled = True
         Button2.Enabled = False
+
     End Sub
 
     Private Sub StartCheck()
